@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - ./app:/usr/src/app
+    ports:
+      - '3000:3000'
+      - '80:80'
+   # command: ["sh", "-c", "npm install && node server.js"]
+    command: ["sh", "-c", "npm install && node app.js"]
