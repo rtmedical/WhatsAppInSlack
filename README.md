@@ -64,6 +64,15 @@ The application should now be up and running!
 
 Before starting the application, ensure you have set up the environment variables in the `.env` file. Refer to `.env.example` for required variables.
 
+Inside `WhatsAppInSlack/app/db.js`, you will find the following MongoDB connection URI:
+
+```javascript
+const uri = "mongodb+srv://<username>:<password>@cluster-url/test?retryWrites=true&w=majority";
+```
+
+We recommend using [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for a hassle-free MongoDB hosting experience. They offer a free tier that is sufficient for most starter projects.
+
+
 ## Contributing
 
 We love contributions! If you'd like to contribute, please follow these steps:
@@ -81,6 +90,15 @@ This project is licensed under the GNU GENERAL PUBLIC LICENSE. See the [LICENSE]
 ## Acknowledgments
 
 - To all the developers and contributors who made this project possible, thank you!
+- This project utilizes several outstanding open-source libraries to achieve its functionalities:
+  - **[whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js)**: A high-level API to interact with WhatsApp Web.
+  - **[puppeteer](https://github.com/puppeteer/puppeteer)**: A headless Chrome browser provided by Chrome that can be used for rendering web pages and automating web browser interactions.
+  - **[@slack/events-api](https://github.com/slackapi/node-slack-sdk/tree/main/packages/events-api)** & **[@slack/web-api](https://github.com/slackapi/node-slack-sdk/tree/main/packages/web-api)**: Libraries to integrate and interact with the Slack platform.
+  - **[express](https://github.com/expressjs/express)**: Fast, unopinionated, minimalist web framework for Node.js.
+  - **[mongodb](https://github.com/mongodb/node-mongodb-native)**: The official MongoDB driver for Node.js.
+  - **[axios](https://github.com/axios/axios)**: Promise-based HTTP client for the browser and Node.js.
+  - **[dotenv](https://github.com/motdotla/dotenv)**: Zero-dependency module that loads environment variables from a `.env` file into `process.env`.
+  - And many others. A complete list can be found in our [package.json](./app/package.json) file.
 - Special thanks to the open-source community for providing invaluable resources and inspiration.
 
 ---
